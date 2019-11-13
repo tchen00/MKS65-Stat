@@ -41,8 +41,7 @@ int main(){
   char permi[10];
   permission(file.st_mode, permi);
   printf("Permissions (ls -l): %s\n",permi);
-  printf("Last Accessed Time: %s", ctime(&file.st_atime));
-  printf("Last Modified Time: %s", ctime(&file.st_mtime));
+  printf("Time of Last Access: %s", ctime(&file.st_atime));
 
   return 0;
 }
