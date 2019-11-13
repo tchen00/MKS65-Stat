@@ -16,14 +16,14 @@ char * readable(long s){
 }
 
 void permission(mode_t mode, char * buffer){
-	char perm[10] ="rwxrwxrwx";
+  char perm[10] ="rwxrwxrwx";
   int i;
-	for (i = 0; i < 9; i++){
-		if(!(mode & (1 << (8-i)))){
-			perm[i] = '-';
-		}
-	}
-	strcat(buffer, perm);
+    for (i = 0; i < 9; i++){
+      if(!(mode & (1 << (8-i)))){
+        perm[i] = '-';
+      }
+    }
+  strcat(buffer, perm);
 }
 
 int main(){
